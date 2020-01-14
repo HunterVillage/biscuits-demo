@@ -1,0 +1,64 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'jdepend'
+apply plugin: "jacoco"
+apply plugin: 'build-dashboard'
+apply plugin: 'maven-publish'
+
+group = 'github.leyan95'
+version = '0.1.0'
+sourceCompatibility = 1.8
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+javadoc {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    exclude '*'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            pom.withXml {
+                asNode().remove(asNode().get("dependencies"))
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username "${upload_username}"
+                password "${upload_password}"
+            }
+            url "${upload_url}"
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+compileJava.dependsOn(processResources)
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'
+    implementation 'com.github.leyan95:biscuits:0.1.4'
+    implementation 'mysql:mysql-connector-java:8.0.13'
+
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:2.1.1.RELEASE")
+    testImplementation('org.springframework.boot:spring-boot-starter-test:2.1.1.RELEASE')
+}
+

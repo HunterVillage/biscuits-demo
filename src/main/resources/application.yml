@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: demo
+server:
+  port: 8089
+
+pocket:
+  datasource:
+    serverId: 101
+    node:
+      - url: jdbc:mysql://localhost:3306/home?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+        nodeName: mysql-01
+        driverName: com.mysql.cj.jdbc.Driver
+        showSql: true
+        user: root
+        password: root
+        poolMiniSize: 10
+        poolMaxSize: 100
+        timeout: 1000
+        cacheSize: 1000
+        session: biscuits,demo
+biscuits:
+  token:
+    secret: demo-secret
+    expiration: 10000
+    tokenHead: Bearer
+  filter:
+    excludeUrlPatterns: /login,/register
