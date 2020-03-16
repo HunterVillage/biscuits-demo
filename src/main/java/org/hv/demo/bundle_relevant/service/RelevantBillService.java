@@ -1,10 +1,10 @@
-package org.hv.demo.service;
+package org.hv.demo.bundle_relevant.service;
 
 import org.hv.biscuits.controller.FilterView;
 import org.hv.biscuits.domain.even.Monitor;
 import org.hv.biscuits.service.PageList;
 import org.hv.biscuits.service.Service;
-import org.hv.demo.aggregate.relevant.RelevantBill;
+import org.hv.demo.bundle_relevant.aggregate.RelevantBill;
 
 import java.sql.SQLException;
 

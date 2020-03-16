@@ -2,8 +2,8 @@ package org.hv.demo.infrastructure.mediator;
 
 import org.hv.biscuits.domain.mediator.AbstractMediator;
 import org.hv.biscuits.domain.mediator.Mediator;
-import org.hv.demo.service.OrderService;
-import org.hv.demo.service.RelevantBillService;
+import org.hv.demo.bundle_order.service.OrderService;
+import org.hv.demo.bundle_relevant.service.RelevantBillService;
 import org.springframework.stereotype.Component;
 
 import static org.hv.demo.constant.DemoMediatorConstant.MEDIATOR_FIND_ORDER_BY_UUID;

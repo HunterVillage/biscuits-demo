@@ -1,9 +1,9 @@
-package org.hv.demo.service;
+package org.hv.demo.bundle_order.service;
 
 import org.hv.biscuits.controller.FilterView;
 import org.hv.biscuits.service.PageList;
 import org.hv.biscuits.service.Service;
-import org.hv.demo.aggregate.order.Order;
+import org.hv.demo.bundle_order.aggregate.Order;
 
 import java.sql.SQLException;
 

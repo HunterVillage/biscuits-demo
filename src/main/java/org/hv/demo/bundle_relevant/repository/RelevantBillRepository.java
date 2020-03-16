@@ -1,7 +1,7 @@
-package org.hv.demo.repository;
+package org.hv.demo.bundle_relevant.repository;
 
 import org.hv.biscuits.repository.CommonRepository;
-import org.hv.demo.aggregate.relevant.RelevantBill;
+import org.hv.demo.bundle_relevant.aggregate.RelevantBill;
 
 import java.sql.SQLException;
 

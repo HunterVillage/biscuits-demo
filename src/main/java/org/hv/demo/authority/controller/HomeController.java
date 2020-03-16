@@ -1,11 +1,11 @@
-package org.hv.demo.controller;
+package org.hv.demo.authority.controller;
 
 import org.hv.biscuits.annotation.Action;
 import org.hv.biscuits.annotation.Controller;
 import org.hv.biscuits.controller.AbstractController;
 import org.hv.biscuits.controller.Body;
 import org.hv.biscuits.spine.model.User;
-import org.hv.demo.service.SecurityService;
+import org.hv.demo.authority.service.SecurityService;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -33,12 +33,12 @@ public class HomeController extends AbstractController {
     }
 
     @Action(actionId = "register", method = RequestMethod.POST)
-    public Body<User> register(@RequestParam String avatar, @RequestParam String name, @RequestParam String password) throws SQLException, IllegalAccessException {
+    public Body register(@RequestParam String avatar, @RequestParam String name, @RequestParam String password) throws SQLException, IllegalAccessException {
         if (avatar == null || password == null || name == null) {
-            return Body.newWaringInstance("失败", "请正确填写信息", null);
+            return Body.warning().title("失败").message("请正确填写信息");
         } else {
             User user = this.securityService.register(avatar, name, password);
-            return Body.newSuccessInstance("成功", "恭喜！注册成功！", user);
+            return Body.success().title("成功").message("恭喜！注册成功！");
         }
     }
 }

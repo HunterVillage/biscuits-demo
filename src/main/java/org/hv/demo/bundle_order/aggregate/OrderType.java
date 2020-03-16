@@ -1,4 +1,4 @@
-package org.hv.demo.aggregate.order;
+package org.hv.demo.bundle_order.aggregate;
 
 import org.hv.pocket.annotation.Column;
 import org.hv.pocket.annotation.Entity;

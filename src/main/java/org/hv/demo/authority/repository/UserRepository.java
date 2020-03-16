@@ -1,4 +1,4 @@
-package org.hv.demo.repository;
+package org.hv.demo.authority.repository;
 
 import org.hv.biscuits.repository.CommonRepository;
 import org.hv.biscuits.spine.model.User;

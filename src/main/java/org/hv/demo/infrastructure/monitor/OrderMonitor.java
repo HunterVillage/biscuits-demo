@@ -2,7 +2,7 @@ package org.hv.demo.infrastructure.monitor;
 
 import org.hv.biscuits.domain.even.Monitor;
 import org.hv.demo.infrastructure.mediator.OrderMediator;
-import org.hv.demo.aggregate.order.Order;
+import org.hv.demo.bundle_order.aggregate.Order;
 import org.springframework.stereotype.Component;
 
 import static org.hv.demo.constant.DemoEvenConstant.EVEN_ORDER_SAVE;

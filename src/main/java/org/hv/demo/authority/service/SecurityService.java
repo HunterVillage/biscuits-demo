@@ -1,4 +1,4 @@
-package org.hv.demo.service;
+package org.hv.demo.authority.service;
 
 import org.hv.biscuits.spine.model.User;
 

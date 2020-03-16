@@ -1,8 +1,8 @@
 package org.hv.demo.constant;
 
 import org.hv.biscuits.domain.mediator.Mediator;
-import org.hv.demo.aggregate.order.Order;
-import org.hv.demo.aggregate.relevant.RelevantBill;
+import org.hv.demo.bundle_order.aggregate.Order;
+import org.hv.demo.bundle_relevant.aggregate.RelevantBill;
 
 /**
  * @author wujianchuan

@@ -1,4 +1,4 @@
-package org.hv.demo.aggregate.order;
+package org.hv.demo.bundle_order.aggregate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import org.hv.biscuits.jsonserializer.LocalDateTimeDeserializer;

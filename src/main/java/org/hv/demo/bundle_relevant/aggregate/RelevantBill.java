@@ -1,4 +1,4 @@
-package org.hv.demo.aggregate.relevant;
+package org.hv.demo.bundle_relevant.aggregate;
 
 import org.hv.pocket.annotation.Column;
 import org.hv.pocket.annotation.Entity;

@@ -1,12 +1,11 @@
-package org.hv.demo.service.impl;
+package org.hv.demo.bundle_relevant.service;
 
 import org.hv.biscuits.annotation.Service;
 import org.hv.biscuits.controller.FilterView;
 import org.hv.biscuits.service.AbstractService;
 import org.hv.biscuits.service.PageList;
-import org.hv.demo.aggregate.relevant.RelevantBill;
-import org.hv.demo.repository.RelevantBillRepository;
-import org.hv.demo.service.RelevantBillService;
+import org.hv.demo.bundle_relevant.aggregate.RelevantBill;
+import org.hv.demo.bundle_relevant.repository.RelevantBillRepository;
 import org.hv.demo.constant.DemoEvenConstant;
 
 import java.sql.SQLException;
@@ -56,8 +55,8 @@ public class RelevantBillServiceImpl extends AbstractService implements Relevant
 
     @Override
     public void execute(Object... args) throws SQLException {
-        System.out.println(String.format("I'm %s I see you. I see you. Come out guy, ha ha ha.", this.getClass().getName()));
-        System.out.println(String.format("Give me %s biscuits", args[0]));
+        System.out.println(String.format("I'm %s I can hear you.", this.getClass().getName()));
+        System.out.println(String.format("Give me %s biscuit", args[0]));
         RelevantBill relevantBill = this.findOne("10130");
         System.out.println(String.format("Relevant Bill Code Is: %s", relevantBill.getCode()));
     }

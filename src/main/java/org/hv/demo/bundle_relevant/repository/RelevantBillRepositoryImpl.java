@@ -1,7 +1,6 @@
-package org.hv.demo.repository.impl;
+package org.hv.demo.bundle_relevant.repository;
 
-import org.hv.demo.aggregate.relevant.RelevantBill;
-import org.hv.demo.repository.RelevantBillRepository;
+import org.hv.demo.bundle_relevant.aggregate.RelevantBill;
 import org.hv.pocket.criteria.Criteria;
 import org.hv.pocket.criteria.Modern;
 import org.hv.pocket.criteria.Restrictions;

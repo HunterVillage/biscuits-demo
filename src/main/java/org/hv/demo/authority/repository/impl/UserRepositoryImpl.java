@@ -1,6 +1,6 @@
-package org.hv.demo.repository.impl;
+package org.hv.demo.authority.repository.impl;
 
-import org.hv.demo.repository.UserRepository;
+import org.hv.demo.authority.repository.UserRepository;
 import org.hv.pocket.criteria.Criteria;
 import org.hv.pocket.criteria.Restrictions;
 import org.hv.biscuits.repository.AbstractCommonRepository;

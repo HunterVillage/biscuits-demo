@@ -1,7 +1,7 @@
 package org.hv.demo.infrastructure.processnode.orderAuditProcessor;
 
 import org.hv.biscuits.domain.process.State;
-import org.hv.demo.service.OrderService;
+import org.hv.demo.bundle_order.service.OrderService;
 
 /**
  * @author wujianchuan

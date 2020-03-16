@@ -1,7 +1,8 @@
-package org.hv.demo.service.impl;
+package org.hv.demo.authority.service.impl;
 
-import org.hv.demo.repository.UserRepository;
-import org.hv.demo.service.SecurityService;
+import org.hv.biscuits.controller.UserView;
+import org.hv.demo.authority.repository.UserRepository;
+import org.hv.demo.authority.service.SecurityService;
 import org.hv.biscuits.annotation.Service;
 import org.hv.biscuits.service.AbstractService;
 import org.hv.biscuits.spine.model.User;
@@ -9,6 +10,7 @@ import org.hv.biscuits.spine.utils.EncodeUtil;
 import org.hv.biscuits.utils.TokenUtil;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  * @author wujianchuan
@@ -31,7 +33,8 @@ public class SecurityServiceImpl extends AbstractService implements SecurityServ
         if (user == null) {
             throw new IllegalArgumentException("The username or password is incorrect. Please fill in again.");
         }
-        return this.tokenUtil.generateToken(user);
+        UserView userView = UserView.newInstance().setUuid(user.getUuid()).setAvatar(user.getAvatar()).setName(user.getName()).setAuthIds(new ArrayList());
+        return this.tokenUtil.generateToken(userView);
     }
 
     @Override

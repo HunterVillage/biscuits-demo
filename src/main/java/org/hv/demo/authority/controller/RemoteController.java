@@ -1,4 +1,4 @@
-package org.hv.demo.controller;
+package org.hv.demo.authority.controller;
 
 import org.hv.biscuits.annotation.Action;
 import org.hv.biscuits.annotation.Controller;
