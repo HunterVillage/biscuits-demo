@@ -46,6 +46,13 @@ publishing {
 }
 
 repositories {
+    maven {
+        url "${download_url}"
+        credentials {
+            username "${download_username}"
+            password "${download_password}"
+        }
+    }
     mavenLocal()
     mavenCentral()
     maven { url 'https://jitpack.io' }
