@@ -33,6 +33,7 @@
 ```
 ### 测试案例
 1.通过向`localhost:8089/home/login?avatar=admin&password=123456`发送 post 请求拿到响应的 token。
+
 2.通过向`localhost:8089/order/save`发送 post 请求并携带头信息（注意：值以`Bearer `开头） 'Authorization'：'Bearer eyJhbGciOiJIUzUxMiJ9
 .eyJhdmF0YXIiOiJhIiwiZXhwIjoxNTg0NDkzNDIwLCJhdXRoIjoiIiwiY3JlYXRlZCI6MTU4NDQ5MjgyMDc4MX0.s5cepPx4RilRl_BtrsbBtzPMHQFuJuhCNXDg5HZHv3iUPVKMSavtDNsu8dMzolhL0xvcJFfs6Z0Gxe98nkCovg'
 
