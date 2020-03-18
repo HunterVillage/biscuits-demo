@@ -31,7 +31,21 @@
 │   └── processnode                     //状态流转服务目录
 └── Application.java                    //启动程序
 ```
+### 测试案例
+1.通过向`localhost:8089/home/login?avatar=admin&password=123456`发送 post 请求拿到响应的 token。
+2.通过向`localhost:8089/order/save`发送 post 请求并携带头信息（注意：值以`Bearer `开头） 'Authorization'：'Bearer eyJhbGciOiJIUzUxMiJ9
+.eyJhdmF0YXIiOiJhIiwiZXhwIjoxNTg0NDkzNDIwLCJhdXRoIjoiIiwiY3JlYXRlZCI6MTU4NDQ5MjgyMDc4MX0.s5cepPx4RilRl_BtrsbBtzPMHQFuJuhCNXDg5HZHv3iUPVKMSavtDNsu8dMzolhL0xvcJFfs6Z0Gxe98nkCovg'
 
+3.至此可看到服务端控制台打印出以下信息：
+```text
+I'm org.hv.demo.bundles.bundle_relevant.service.RelevantBillServiceImpl I can hear you.
+Give me 1 biscuit
+Relevant Bill Code Is: Hello-001
+Catch even of order save，My show time!!!
+Order uuid is: 1010123
+Order code is: DEMO-1584492838703
+Number of rows affected is: 1
+```
 ## 功能点设计思路
 ### 分层结构
 ![Framework diagram](hierarchy.png)
