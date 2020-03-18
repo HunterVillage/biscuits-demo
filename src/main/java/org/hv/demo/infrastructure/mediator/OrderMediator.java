@@ -2,12 +2,12 @@ package org.hv.demo.infrastructure.mediator;
 
 import org.hv.biscuits.domain.mediator.AbstractMediator;
 import org.hv.biscuits.domain.mediator.Mediator;
-import org.hv.demo.bundle_order.service.OrderService;
-import org.hv.demo.bundle_relevant.service.RelevantBillService;
+import org.hv.demo.bundles.bundle_order.service.OrderService;
+import org.hv.demo.bundles.bundle_relevant.service.RelevantBillService;
 import org.springframework.stereotype.Component;
 
-import static org.hv.demo.constant.DemoMediatorConstant.MEDIATOR_FIND_ORDER_BY_UUID;
-import static org.hv.demo.constant.DemoMediatorConstant.MEDIATOR_UPDATE_RELEVANT_STATUS;
+import static org.hv.demo.infrastructure.constant.DemoMediatorConstant.MEDIATOR_FIND_ORDER_BY_UUID;
+import static org.hv.demo.infrastructure.constant.DemoMediatorConstant.MEDIATOR_UPDATE_RELEVANT_STATUS;
 
 /**
  * @author wujianchuan
