@@ -18,6 +18,7 @@ public class KafkaConsumer {
         if(kafkaMessage.isPresent()){
             Object message = kafkaMessage.get();
             System.out.println(">>>>>>>>接收消息message =" + message);
+            throw new RuntimeException("fail");
         }
     }
 }

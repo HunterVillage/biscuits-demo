@@ -2,6 +2,7 @@ package org.hv.demo.message;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.kafka.core.KafkaOperations;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
@@ -22,12 +23,16 @@ public class KafkaSender {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void send(Long i) throws JsonProcessingException {
+    void send(Long i) throws JsonProcessingException {
         Message message = new Message();
         message.setId(i);
         message.setMsg(UUID.randomUUID().toString());
         message.setSendTime(LocalDate.now());
         System.out.println(String.format("========发送消息  " + i + " >>>>%s<<<<<==========", objectMapper.writeValueAsString(message)));
         kafkaTemplate.send("test", objectMapper.writeValueAsString(message));
+        kafkaTemplate.executeInTransaction(kafkaOperations -> {
+            kafkaOperations.send("test", "test executeInTransaction");
+            return true;
+        });
     }
 }
