@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * @author wujianchuan
  */
-@Controller(bundleId = "remote", auth = false)
+@Controller(bundleId = "remote", auth = false, name = "远程调用")
 public class RemoteController extends AbstractController {
 
     @Action(actionId = "bai_du_dom", method = RequestMethod.GET)

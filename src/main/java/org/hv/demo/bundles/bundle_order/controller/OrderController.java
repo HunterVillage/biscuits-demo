@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 /**
  * @author wujianchuan
  */
-@Controller(bundleId = "order")
+@Controller(bundleId = "order", name = "订单")
 public class OrderController extends AbstractController {
     private final OrderService orderPlusService;
 
