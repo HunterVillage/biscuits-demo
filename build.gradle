@@ -62,7 +62,7 @@ compileJava.dependsOn(processResources)
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE'
-    implementation 'com.github.leyan95:biscuits:0.1.10'
+    implementation 'com.github.leyan95:biscuits:0.1.19'
     implementation 'mysql:mysql-connector-java:8.0.13'
 
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:2.1.1.RELEASE")

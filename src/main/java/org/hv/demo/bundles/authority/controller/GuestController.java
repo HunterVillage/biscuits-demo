@@ -2,7 +2,6 @@ package org.hv.demo.bundles.authority.controller;
 
 import org.hv.biscuits.annotation.Action;
 import org.hv.biscuits.annotation.Controller;
-import org.hv.biscuits.controller.AbstractController;
 import org.hv.biscuits.controller.Body;
 import org.hv.biscuits.spine.model.User;
 import org.hv.demo.bundles.authority.service.SecurityService;
@@ -15,7 +14,7 @@ import java.sql.SQLException;
  * @author wujianchuan
  */
 @Controller(bundleId = "home", auth = false, name = "主页")
-public class GuestController extends AbstractController {
+public class GuestController {
     private final SecurityService securityService;
 
     public GuestController(SecurityService securityService) {
